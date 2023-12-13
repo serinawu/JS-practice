@@ -23,6 +23,48 @@ html body main .projectList > div {
   background: lightgray;
   position: relative;
 }
+html body main .projectList .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+html body main .projectList .content .completed {
+  text-decoration: line-through;
+}
+html body main .projectList .content > .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body main .projectList .content p.nowText {
+  text-align: center;
+}
+html body main .projectList .content p.nowText > span {
+  display: block;
+}
+html body main .projectList .content p.itemName {
+  font-size: 12px;
+  white-space: nowrap;
+  margin: 0 10px 0 0;
+}
+html body main .projectList .content img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+}
+html body main .projectList .content img.timeRemind {
+  width: 50%;
+}
+html body main .projectList .content button.setClock {
+  margin: 10px auto;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

@@ -25,10 +25,57 @@ html {
                     width: 100%;
                     background: lightgray;
                     position: relative;
+
+                    
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+
+                    .completed {
+                        text-decoration: line-through;
+                    }
+
+                    &>.group {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    p {
+
+                        &.nowText {
+                            text-align: center;
+
+                            &>span {
+                                display: block;
+                            }
+                        }
+
+                        &.itemName {
+                            font-size: 12px;
+                            white-space: nowrap;
+                            margin: 0 10px 0 0;
+                        }
+                    }
+
+                    img {
+                        object-fit: contain;
+                        margin: 0 auto;
+
+                        &.timeRemind {
+                            width: 50%;
+                        }
+                    }
+
+                    button {
+
+                        &.setClock {
+                            margin: 10px auto;
+                        }
+                    }
                 }
             }
         }
     }
-
-    
 }
