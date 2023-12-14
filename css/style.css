@@ -63,6 +63,9 @@ html body main .projectList .content img.timeRemind {
   width: 50%;
 }
 html body main .projectList .content button.setClock {
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
   margin: 10px auto;
 }
 

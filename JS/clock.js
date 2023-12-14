@@ -1,7 +1,7 @@
 var wakeUpTime = 7;
-const noon = 12;
-const lunchTime = 12;
-const napTime = lunchTime + 2;
+let noon = 12;
+let lunchTime = 12;
+let napTime = lunchTime + 2;
 let partyTime;
 const evening = 18;
 
@@ -11,8 +11,8 @@ var showCurrentTime = function() {
     const currentTime = new Date();
 
     let hours = currentTime.getHours();
-    const minutes = currentTime.getMinutes();
-    const seconds = currentTime.getSeconds();
+    let minutes = currentTime.getMinutes();
+    let seconds = currentTime.getSeconds();
     let meridian = "AM";
 
     //set hours
@@ -44,7 +44,7 @@ var showCurrentTime = function() {
 
 // Getting the clock to increment on its own and change out messages and pictures
 var updateClock = function () {
-    var time = new Date().getHours();
+    var time = new Date().getHours() % 12;
     var messageText;
     var image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg";
     
@@ -65,16 +65,15 @@ var updateClock = function () {
         messageText = "Sleep tight!";
     } else if (time < noon) {
         image = "https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a.jpeg";
-        message = 'Good morning!';
+        messageText = 'Good morning!';
     } else if (time >= evening) {
         image = "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cat_sleep.jpg";
         messageText = "Good afternoon!";
     }
 
-    console.log(messageText);
+    // console.log(messageText);
     timeEventsJS.innerText = messageText;
-    lolcatImage.src = image;
-    
+    lolcatImageJS.src = image;
 };
 
 updateClock();
@@ -106,7 +105,7 @@ partyEvent();
 var wakeUpTimeSelector = document.getElementById("wakeUpTimeSelector");
 
 var wakeUpEvent = function() {
-    wakeUpTime = wakeUpTimeSelector.value;
+    wakeUpTime = parseInt(wakeUpTimeSelector.value, 10);
 };
 
 wakeUpTimeSelector.addEventListener("change", wakeUpEvent);
@@ -115,8 +114,19 @@ wakeUpTimeSelector.addEventListener("change", wakeUpEvent);
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 
 var lunchEvent = function() {
-    lunchTime = lunchTimeSelector.value;
+    lunchTime = parseInt(lunchTimeSelector.value, 10);
+};
+
+lunchTimeSelector.addEventListener("change",lunchEvent);
+
+//設置午睡選擇器
+var napTimeSelector = document.getElementById("napTimeSelector");
+
+var napEvent = function() {
+    napTime = parseInt(napTimeSelector.value, 10);
 }
+
+napTimeSelector.addEventListener("change",napEvent);
 
 //預計改成簡易工作打卡-個人桌面
 //顯示當前日期(星期),時間 (逢六日顯示今天放大假) //額外有時間:串API得到國慶假日提示今天要補班or特殊節日
