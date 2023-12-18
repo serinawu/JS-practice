@@ -22,7 +22,7 @@ document.addEventListener("mousemove", function(event) {
     mouseX = Math.max(0, Math.min(mouseX, canvas.width));
     mouseY = Math.max(0, Math.min(mouseY, canvas.height));
 
-    console.log('mouse moved', mouseX, mouseY);
+    // console.log('mouse moved', mouseX, mouseY);
 });
 
 
