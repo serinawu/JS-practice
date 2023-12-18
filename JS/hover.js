@@ -49,7 +49,7 @@ function Ball () {
     this.x = Math.random() * (tX - this.radius * 2) + this.radius;
     this.y = Math.random() * (tY - this.radius);
     this.dY = Math.random((Math.random() * 2));
-    this.dX = Math.round((Math.random() * 1.5) + 1);
+    this.dX = Math.round((Math.random() * 1) + 1);
     this.vel = Math.random() / 5;
     this.update = function() {
         c.beginPath();

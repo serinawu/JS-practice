@@ -53,6 +53,64 @@ html {
                         align-items: center;
                     }
 
+                    &>.ball {
+                        width: 200px;
+                        height: 200px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #000;
+                        border-radius: 100%;
+                        margin: 50px auto;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 100px;
+                            height: 100px;
+                            background: #fff;
+                            border-radius: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            z-index: 5;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        &::after {
+                            content: '8';
+                            font-size: 60px;
+                            font-weight: bold;
+                            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            z-index: 7;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        .answerContainer {
+                            // display: none;
+                            width: 0;
+                            height: 0;
+                            border-left: 40px solid transparent;
+                            border-right: 40px solid transparent;
+                            border-top: 70px solid #f05b47;
+                            margin: 20px 0 0;
+                            position: relative;
+                            z-index: 7;
+
+                            &>p {
+                                font-size: 12px;
+                                white-space: nowrap;
+                                position: absolute;
+                                top: -10%;
+                                left: 50%;
+                                transform: translate(-50%, -349%);
+                            }
+                        }
+                    }
+
                     p {
 
                         &.nowText {
@@ -86,6 +144,16 @@ html {
                             border-radius: 5px;
                             padding: 10px;
                             margin: 10px auto;
+                        }
+
+                        &.questionBtn {
+                            width: 240px;
+                            height: 40px;
+                            background: #f05b47;
+                            border-radius: 5px;
+                            color: #fff;
+                            font-weight: bold;
+                            margin: 0 auto;
                         }
                     }
                 }

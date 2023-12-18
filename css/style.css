@@ -54,6 +54,67 @@ html body main .projectList .content > .group {
       -ms-flex-align: center;
           align-items: center;
 }
+html body main .projectList .content > .ball {
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+  border-radius: 100%;
+  margin: 50px auto;
+  position: relative;
+}
+html body main .projectList .content > .ball::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body main .projectList .content > .ball::after {
+  content: "8";
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 7;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body main .projectList .content > .ball .answerContainer {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 70px solid #f05b47;
+  margin: 20px 0 0;
+  position: relative;
+  z-index: 7;
+}
+html body main .projectList .content > .ball .answerContainer > p {
+  font-size: 12px;
+  white-space: nowrap;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -349%);
+          transform: translate(-50%, -349%);
+}
 html body main .projectList .content p.nowText {
   text-align: center;
 }
@@ -78,6 +139,15 @@ html body main .projectList .content button.setClock {
   border-radius: 5px;
   padding: 10px;
   margin: 10px auto;
+}
+html body main .projectList .content button.questionBtn {
+  width: 240px;
+  height: 40px;
+  background: #f05b47;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
 }
 
 html, body, div, span, applet, object, iframe,
