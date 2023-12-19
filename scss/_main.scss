@@ -119,6 +119,82 @@ html {
                         }
                     }
 
+                    &.player {
+                        width: 100%;
+
+                        &>.player_block {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            background-color: lightgreen;
+                            transition: background-color .5s;
+                            padding: 10px;
+                            margin: 0 auto;
+
+                            &>div {
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                justify-content: space-between;
+                                margin: 0 auto;
+
+                                &.track-art {
+                                    width: 180px;
+                                    height: 180px;
+                                    background-image: url("https://source.unsplash.com/Qrspubmx6kE/640x360");
+                                    background-size: cover;
+                                    background-position: center;
+                                    margin: 10px auto;
+                                }
+
+                                &.track-name {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                }
+
+                                &.track-artist {
+                                    font-size: 14px;
+                                    margin: 0 0 10px;
+                                }
+
+                                &.controller,
+                                &.slider_container{
+                                    display: flex;
+                                    align-items: center;
+
+                                    .playPause {
+                                        margin: 0 20px;
+                                    }
+
+                                    input {
+                                        margin: 0 10px;
+                                        appearance: none;
+                                        height: 5px;
+                                        background: black;
+                                        opacity: 0.8;
+
+                                        &:hover {
+                                            opacity: 1;
+                                        }
+                                        
+                                        &::-webkit-slider-thumb {
+                                            appearance: none;
+                                            width: 15px;
+                                            height: 15px;
+                                            border-radius: 50px;
+                                            background: white;
+                                            cursor: pointer;
+                                        }
+                                    }
+
+                                    i {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     p {
 
                         &.nowText {

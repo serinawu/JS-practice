@@ -6,6 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <meta name="JS-practice" content="JavaScript practice collection">
+        <script src="https://kit.fontawesome.com/2bd8048d04.js" crossorigin="anonymous"></script>
         <title>JS-practice</title>
     </head>
     <body>
@@ -144,8 +145,35 @@
                         </div>
                     </div>
                     <div class="col card">
-                        <div class="content">
+                        <div class="content player">
                             <h5>音樂播放列表</h5>
+                            <div class="player_block">
+                                <div class="nowPlaying">PLAYING X of Y</div>
+                                <div class="track-art"></div>
+                                <div class="track-name">TrackName</div>
+                                <div class="track-artist">TrackArtist</div>
+                                <div class="controller">
+                                    <div class="prev-track" onclick="prevTrack()">
+                                        <i class="fa fa-step-backward fa-1x"></i>
+                                    </div>
+                                    <div class="playPause" onclick="playPause()">
+                                        <i class="fa fa-play-circle fa-2x"></i>
+                                    </div>
+                                    <div class="next-track" onclick="nextTrack()">
+                                        <i class="fa fa-step-forward fa-1x"></i>
+                                    </div>
+                                </div>
+                                <div class="slider_container">
+                                    <div class="current-time">00:00</div>
+                                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                                    <div class="total-duration">00:00</div>
+                                </div>
+                                <div class="slider_container">
+                                    <i class="fa fa-volume-down"></i>
+                                    <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                                    <i class="fa fa-volume-up"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col card">
@@ -197,4 +225,5 @@
     <script src="./JS/clock.js"></script>
     <script src="./JS/hover.js"></script>
     <script src="./JS/magicBall.js"></script>
+    <script src="musicPlayer"></script>
 </html>

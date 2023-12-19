@@ -120,6 +120,90 @@ html body main .projectList .content > .ball .answerContainer > p {
   -webkit-transform: translate(-50%, -180%);
           transform: translate(-50%, -180%);
 }
+html body main .projectList .content.player {
+  width: 100%;
+}
+html body main .projectList .content.player > .player_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgreen;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  padding: 10px;
+  margin: 0 auto;
+}
+html body main .projectList .content.player > .player_block > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+html body main .projectList .content.player > .player_block > div.track-art {
+  width: 180px;
+  height: 180px;
+  background-image: url("https://source.unsplash.com/Qrspubmx6kE/640x360");
+  background-size: cover;
+  background-position: center;
+  margin: 10px auto;
+}
+html body main .projectList .content.player > .player_block > div.track-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+html body main .projectList .content.player > .player_block > div.track-artist {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+html body main .projectList .content.player > .player_block > div.controller, html body main .projectList .content.player > .player_block > div.slider_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body main .projectList .content.player > .player_block > div.controller .playPause, html body main .projectList .content.player > .player_block > div.slider_container .playPause {
+  margin: 0 20px;
+}
+html body main .projectList .content.player > .player_block > div.controller input, html body main .projectList .content.player > .player_block > div.slider_container input {
+  margin: 0 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.8;
+}
+html body main .projectList .content.player > .player_block > div.controller input:hover, html body main .projectList .content.player > .player_block > div.slider_container input:hover {
+  opacity: 1;
+}
+html body main .projectList .content.player > .player_block > div.controller input::-webkit-slider-thumb, html body main .projectList .content.player > .player_block > div.slider_container input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+}
+html body main .projectList .content.player > .player_block > div.controller i, html body main .projectList .content.player > .player_block > div.slider_container i {
+  cursor: pointer;
+}
 html body main .projectList .content p.nowText {
   text-align: center;
 }
