@@ -123,10 +123,11 @@ html {
                         width: 100%;
 
                         &>.player_block {
+                            width: 100%;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            background-color: lightgreen;
+                            background: lightgreen;
                             transition: background-color .5s;
                             padding: 10px;
                             margin: 0 auto;
