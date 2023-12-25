@@ -205,6 +205,147 @@ html body main .projectList .content.player > .player_block > div.controller inp
 html body main .projectList .content.player > .player_block > div.controller i, html body main .projectList .content.player > .player_block > div.slider_container i {
   cursor: pointer;
 }
+html body main .projectList .content > .sideNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: lightgrey;
+  padding: 0;
+  margin: 0;
+}
+html body main .projectList .content > .sideNav > li {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background: lightgrey;
+  -webkit-transform: background 0.3s;
+          transform: background 0.3s;
+  cursor: pointer;
+}
+html body main .projectList .content > .sideNav > li:hover {
+  background: darkgray;
+}
+html body main .projectList .content > .sideNav > li.active {
+  background: #47baf0;
+  color: #ffffff;
+}
+html body main .projectList .content > .sideNav > li.active:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+html body main .projectList .content > .contentContainer {
+  width: 100%;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+html body main .projectList .content > .contentContainer > .contentType {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview {
+  width: 100%;
+  border: 1px solid black;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  margin: 10px 0;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview .breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  color: #47baf0;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview > .pic {
+  width: 100%;
+  height: 120px;
+  background: lightgrey;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview > .price {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5px 10px;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview > .price > p {
+  text-align: right;
+  position: relative;
+  padding: 0 0 0 15px;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview > .price > p::before {
+  content: "$";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body main .projectList .content > .contentContainer > .contentType > form {
+  width: 100%;
+}
+html body main .projectList .content > .contentContainer > .contentType > form > label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 10px;
+}
+html body main .projectList .content > .contentContainer > .contentType > form > label > p {
+  width: 57px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+html body main .projectList .content > .contentContainer > .contentType > form > label > select, html body main .projectList .content > .contentContainer > .contentType > form > label > input {
+  width: 100%;
+  height: 25px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  font-size: 12px;
+}
+html body main .projectList .content > .contentContainer > .contentType > button {
+  margin: 0 auto;
+}
+html body main .projectList .content > .contentContainer > .contentType p {
+  margin: 0;
+}
+html body main .projectList .content > .contentContainer > .contentType p.type {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 20px 0 0;
+  position: relative;
+}
+html body main .projectList .content > .contentContainer > .contentType p.type::before {
+  content: "»";
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
+}
+html body main .projectList .content .taskForm input {
+  margin: 0 5px 0 0;
+}
 html body main .projectList .content p.nowText {
   text-align: center;
 }
@@ -312,7 +453,6 @@ input {
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: none;
   font-family: "微軟正黑體";
 }
 

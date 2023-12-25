@@ -14,10 +14,10 @@
         <main>
             <div class="container-xl grid projectList" style="--bs-columns: 4; --bs-gap: 15px;">
                 <div class="row row-cols-4">
-                    <div class="col card practice">
+                    <div class="col card">
                         <div class="content taskManage">
                             <h5>任務管理</h5>
-                            <form id ="taskForm">
+                            <form id ="taskForm" class="taskForm">
                                 <div class="input-group">
                                     <input id="taskInput" type="text" placeholder="輸入任務">
                                     <button type="submit">添加任務</button>
@@ -177,13 +177,50 @@
                         </div>
                     </div>
                     <div class="col card">
-                        <div class="content">
+                        <div class="content inventory">
                             <h5>庫存系統</h5>
-                        </div>
-                    </div>
-                    <div class="col card">
-                        <div class="content">
-                            <h5>語音檢測</h5>
+                            <ul class="sideNav">
+                                <li class="active">新增產品</li>
+                                <li>產品庫存</li>
+                                <li>類別</li>
+                            </ul>
+                            <div class="contentContainer">
+                                <div class="contentType">
+                                    <p>預覽</p>
+                                    <div class="preview">
+                                        <div class="breadcrumbs">
+                                            <p class="type">產品</p>
+                                        </div>
+                                        <div class="pic"></div>
+                                        <div class="price">
+                                            <p>0</p>
+                                        </div>
+                                    </div>
+                                    <form id="addProduct">
+                                        <label>
+                                            <p>種類</p>
+                                            <select>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                        </label>
+                                        <label>
+                                            <p>產品名稱</p>
+                                            <input type="text">
+                                        </label>
+                                        <label>
+                                            <p>單價</p>
+                                            <input type="text">
+                                        </label>
+                                        <label>
+                                            <p>圖片</p>
+                                            <input type="text" placeholder="圖片連結">
+                                        </label>
+                                    </form>
+                                    <button for="addProduct" type="submit">新增產品</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col card">
@@ -226,4 +263,5 @@
     <script src="./JS/hover.js"></script>
     <script src="./JS/magicBall.js"></script>
     <script src="./JS/musicPlayer.js"></script>
+    <script src="./JS/inventory.js"></script>
 </html>
