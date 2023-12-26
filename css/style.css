@@ -205,7 +205,7 @@ html body main .projectList .content.player > .player_block > div.controller inp
 html body main .projectList .content.player > .player_block > div.controller i, html body main .projectList .content.player > .player_block > div.slider_container i {
   cursor: pointer;
 }
-html body main .projectList .content > .sideNav {
+html body main .projectList .content > .topNav {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,7 +214,7 @@ html body main .projectList .content > .sideNav {
   padding: 0;
   margin: 0;
 }
-html body main .projectList .content > .sideNav > li {
+html body main .projectList .content > .topNav > li {
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -225,14 +225,14 @@ html body main .projectList .content > .sideNav > li {
           transform: background 0.3s;
   cursor: pointer;
 }
-html body main .projectList .content > .sideNav > li:hover {
+html body main .projectList .content > .topNav > li:hover {
   background: darkgray;
 }
-html body main .projectList .content > .sideNav > li.active {
+html body main .projectList .content > .topNav > li.active {
   background: #47baf0;
   color: #ffffff;
 }
-html body main .projectList .content > .sideNav > li.active:hover {
+html body main .projectList .content > .topNav > li.active:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
 }
@@ -243,13 +243,16 @@ html body main .projectList .content > .contentContainer {
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
 }
 html body main .projectList .content > .contentContainer > .contentType {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+html body main .projectList .content > .contentContainer > .contentType.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 html body main .projectList .content > .contentContainer > .contentType > .preview {
   width: 100%;
