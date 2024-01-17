@@ -265,8 +265,34 @@ html body main .projectList .content > .contentContainer > .contentType > .previ
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   color: #47baf0;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview .breadcrumbs > p {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 20px 0 0;
+  position: relative;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview .breadcrumbs > p:not(:last-of-type)::after {
+  content: "»";
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview .breadcrumbs > p.category {
+  cursor: pointer;
+}
+html body main .projectList .content > .contentContainer > .contentType > .preview .pdName {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px;
 }
 html body main .projectList .content > .contentContainer > .contentType > .preview > .pic {
   width: 100%;
@@ -295,6 +321,11 @@ html body main .projectList .content > .contentContainer > .contentType > .previ
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+html body main .projectList .content > .contentContainer > .contentType > .inventoryTable p {
+  font-size: 10px;
+  white-space: nowrap;
+  text-align: center;
 }
 html body main .projectList .content > .contentContainer > .contentType > form {
   width: 100%;
@@ -330,21 +361,6 @@ html body main .projectList .content > .contentContainer > .contentType > button
 }
 html body main .projectList .content > .contentContainer > .contentType p {
   margin: 0;
-}
-html body main .projectList .content > .contentContainer > .contentType p.type {
-  font-size: 13px;
-  font-weight: bold;
-  padding: 0 20px 0 0;
-  position: relative;
-}
-html body main .projectList .content > .contentContainer > .contentType p.type::before {
-  content: "»";
-  font-size: 14px;
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  -webkit-transform: translateY(-55%);
-          transform: translateY(-55%);
 }
 html body main .projectList .content .taskForm input {
   margin: 0 5px 0 0;

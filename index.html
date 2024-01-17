@@ -180,12 +180,12 @@
                         <div class="content inventory">
                             <h5>庫存系統</h5>
                             <ul class="topNav">
-                                <li class="active" onclick="showContent(0)">新增產品</li>
-                                <li onclick="showContent(1)">產品庫存</li>
-                                <li onclick="showContent(2)">類別</li>
+                                <li class="active">新增產品</li>
+                                <li>產品庫存</li>
+                                <li>類別</li>
                             </ul>
                             <div class="contentContainer">
-                                <div class="contentType active">
+                                <div class="contentType  active">
                                     <p>預覽</p>
                                     <div class="preview">
                                         <div class="breadcrumbs">
@@ -200,6 +200,7 @@
                                         <label>
                                             <p>種類</p>
                                             <select id="categorySelect">
+                                                <!-- <option value="none" selected disabled hidden>請選擇選項</option> -->
                                                 <option>T-shirt</option>
                                                 <option>下著</option>
                                                 <option>鞋子</option>
@@ -207,54 +208,75 @@
                                         </label>
                                         <label>
                                             <p>產品名稱</p>
-                                            <input type="text">
+                                            <input type="text" id="productName">
                                         </label>
                                         <label>
                                             <p>單價</p>
-                                            <input type="text">
+                                            <input type="text" id="productPrice">
                                         </label>
                                         <label>
                                             <p>圖片</p>
                                             <input type="text" placeholder="圖片連結">
                                         </label>
                                     </form>
-                                    <button for="addProduct" type="submit">新增產品</button>
+                                    <button for="addProduct" type="submit" class="btn btn-primary">新增產品</button>
                                 </div>
                                 <div class="contentType">
                                     <p>產品庫存</p>
-                                    <table class="inventoryTable">
-                                        <tr>
-                                            <th>
-                                                <p>產品名稱</p>
-                                            </th>
-                                            <th>
-                                                <p>價格</p>
-                                            </th>
-                                            <th>
-                                                <p>類別</p>
-                                            </th>
-                                            <th>
-                                                <p>圖片</p>
-                                            </th>
-                                            <th></th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>藍T</p>
-                                            </td>
-                                            <td>
-                                                <p>$200</p>
-                                            </td>
-                                            <td>
-                                                <p>T-shirt</p>
-                                            </td>
-                                            <td>
-                                                <p onclick="showPic()">查看圖片</p>
-                                            </td>
-                                            <td>
-                                                <p onclick="editDetail()">編輯</p>
-                                            </td>
-                                        </tr>
+                                    <table class="inventoryTable table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <p>產品名稱</p>
+                                                </th>
+                                                <th>
+                                                    <p>價格</p>
+                                                </th>
+                                                <th>
+                                                    <p>類別</p>
+                                                </th>
+                                                <th>
+                                                    <p>圖片</p>
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>藍T</p>
+                                                </td>
+                                                <td>
+                                                    <p>$200</p>
+                                                </td>
+                                                <td>
+                                                    <p>T-shirt</p>
+                                                </td>
+                                                <td>
+                                                    <p onclick="showPic()">查看圖片</p>
+                                                </td>
+                                                <td>
+                                                    <p onclick="editDetail()">編輯</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>外套</p>
+                                                </td>
+                                                <td>
+                                                    <p>$200</p>
+                                                </td>
+                                                <td>
+                                                    <p>jacket</p>
+                                                </td>
+                                                <td>
+                                                    <p onclick="showPic()">查看圖片</p>
+                                                </td>
+                                                <td>
+                                                    <p onclick="editDetail()">編輯</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                                 <div class="contentType">
