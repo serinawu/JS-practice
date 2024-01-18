@@ -126,4 +126,33 @@ document.getElementById('picURL').addEventListener('input', function() {
     }
 })
 
+document.getElementById('addProduct').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let category = document.getElementById('categorySelect').value;
+    let productName = document.getElementById('productName').value;
+    let productPrice = document.getElementById('productPrice').value;
+    let picURL = document.getElementById('picURL').value;
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            category: category,
+            productName: productName,
+            productPrice: productPrice,
+            picURL: picURL
+        })
+    })
+    .then(response => response.json())
+    .then(json => {
+        console.log(json);
+        // 在這裡處理伺服器返回的資料
+    })
+    .catch(error => {
+        console.error('Error', error);
+    });
+});
 

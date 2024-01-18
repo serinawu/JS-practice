@@ -1,11 +1,10 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "hello"
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "category": "包包",
+      "productName": "puzzle",
+      "productPrice": "21,350.00",
+      "picURL": "https://media.lanecrawford.com/B/V/Y/BVY664_in_xl.jpg"
     }
-  }
+  ]
+}

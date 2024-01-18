@@ -84,7 +84,6 @@ function random_bg_color() {
     let blue = Math.floor(Math.random() * 256) + 64;
 
     let bgColor = "rgb(" + red + "," + green + "," + blue + ")";
-    console.log("New background color:", bgColor);
 
     //設置新的背景色
     document.querySelector(".player_block").style.background = bgColor;
