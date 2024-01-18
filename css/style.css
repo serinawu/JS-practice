@@ -293,11 +293,15 @@ html body main .projectList .content > .contentContainer > .contentType > .previ
   font-size: 14px;
   font-weight: bold;
   padding: 0 10px;
+  margin-top: -10px;
 }
 html body main .projectList .content > .contentContainer > .contentType > .preview > .pic {
   width: 100%;
   height: 120px;
   background: lightgrey;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 html body main .projectList .content > .contentContainer > .contentType > .preview > .price {
   width: auto;

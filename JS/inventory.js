@@ -87,7 +87,6 @@ document.getElementById('productName').addEventListener('input', function () {
         newDiv.textContent = inputValue;
 
         if (firstAdd) {
-            // 將新創建的 div 插入到 .breadcrumbs 之後
             preViewType.insertAdjacentElement('afterend', newDiv);
             firstAdd = false;
         } else {
@@ -97,7 +96,6 @@ document.getElementById('productName').addEventListener('input', function () {
             }
         }
     } else {
-        // 如果 inputValue 為空，則移除現有的 .pdName 元素
         let existingDiv = document.querySelector('.pdName');
         if (existingDiv) {
             existingDiv.remove();
@@ -114,6 +112,17 @@ document.getElementById('productPrice').addEventListener("input", function() {
         priceTag.textContent = inputValue;
     } else {
         priceTag.textContent = '0';
+    }
+})
+
+document.getElementById('picURL').addEventListener('input', function() {
+    let inputValue = this.value;
+    const picPreview = document.querySelector('.preview .pic');
+
+    if(inputValue) {
+        picPreview.style.backgroundImage= 'url('+ inputValue + ')';
+    } else {
+        picPreview.style.backgroundImage= 'none';
     }
 })
 
