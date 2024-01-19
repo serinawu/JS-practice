@@ -209,18 +209,18 @@
                                         </label>
                                         <label>
                                             <p>產品名稱</p>
-                                            <input type="text" id="productName">
+                                            <input type="text" id="productName" required>
                                         </label>
                                         <label>
                                             <p>單價</p>
-                                            <input type="text" id="productPrice">
+                                            <input type="text" id="productPrice" required>
                                         </label>
                                         <label>
                                             <p>圖片</p>
                                             <input type="text" placeholder="圖片連結" id="picURL">
                                         </label>
                                     </form>
-                                    <button for="addProduct" type="submit" class="btn btn-primary">新增產品</button>
+                                    <button for="addProduct" id="addProductBtn" type="button" class="btn btn-primary">新增產品</button>
                                 </div>
                                 <div class="contentType">
                                     <p>產品庫存</p>
@@ -245,13 +245,13 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <p>藍T</p>
+                                                    <input type="text" value="藍T" disabled required>
                                                 </td>
                                                 <td>
-                                                    <p>$200</p>
+                                                    <input type="text" value="$200" disabled required>
                                                 </td>
                                                 <td>
-                                                    <p>T-shirt</p>
+                                                    <input type="text" value="T-shirt" disabled required>
                                                 </td>
                                                 <td>
                                                     <p onclick="showPic()">查看圖片</p>
@@ -262,13 +262,13 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p>外套</p>
+                                                    <input type="text" value="外套" disabled>
                                                 </td>
                                                 <td>
-                                                    <p>$200</p>
+                                                    <input type="text" value="$200" disabled>
                                                 </td>
                                                 <td>
-                                                    <p>jacket</p>
+                                                    <input type="text" value="jacket" disabled>
                                                 </td>
                                                 <td>
                                                     <p onclick="showPic()">查看圖片</p>

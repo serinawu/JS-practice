@@ -316,6 +316,18 @@ html {
                             }
 
                             &>.inventoryTable {
+                                table-layout: fixed;
+
+                                input {
+                                    width: 100%;
+                                    font-size: 10px;
+                                    text-align: center;
+
+                                    &:disabled {
+                                        background: transparent;
+                                        border: none;
+                                    }
+                                }
                                 
                                 p {
                                     font-size: 10px;

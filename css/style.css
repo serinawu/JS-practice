@@ -326,6 +326,18 @@ html body main .projectList .content > .contentContainer > .contentType > .previ
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+html body main .projectList .content > .contentContainer > .contentType > .inventoryTable {
+  table-layout: fixed;
+}
+html body main .projectList .content > .contentContainer > .contentType > .inventoryTable input {
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+}
+html body main .projectList .content > .contentContainer > .contentType > .inventoryTable input:disabled {
+  background: transparent;
+  border: none;
+}
 html body main .projectList .content > .contentContainer > .contentType > .inventoryTable p {
   font-size: 10px;
   white-space: nowrap;

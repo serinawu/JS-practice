@@ -126,33 +126,34 @@ document.getElementById('picURL').addEventListener('input', function() {
     }
 })
 
-document.getElementById('addProduct').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.getElementById('addProductBtn').addEventListener('click', function (event) {
 
     let category = document.getElementById('categorySelect').value;
     let productName = document.getElementById('productName').value;
     let productPrice = document.getElementById('productPrice').value;
     let picURL = document.getElementById('picURL').value;
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            category: category,
-            productName: productName,
-            productPrice: productPrice,
-            picURL: picURL
-        })
-    })
-    .then(response => response.json())
-    .then(json => {
-        console.log(json);
-        // 在這裡處理伺服器返回的資料
-    })
-    .catch(error => {
-        console.error('Error', error);
-    });
+    let newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
+        <td><input type="text" value="${productName}" disabled></td>
+        <td><input type="text" value="${productPrice}" disabled></td>
+        <td><input type="text" value="${productPrice}" disabled></td>
+        <td><p onclick="showPic()">查看圖片</p></td>
+        <td><p onclick="editDetail()">編輯</p onclick=></td>
+    `;
+
+    document.querySelector('.inventoryTable tbody').appendChild(newRow);
 });
 
+function editDetail(event) {
+    let tdElement = event.target.parentNode;
+    let trElement = event.target.parentNode;
+    let inputElements = trElement.querySelectorAll('input');
+
+    inputElements.forEach(input => {
+        input.disabled = false;
+    });
+
+    event.target.onclick = saveEdit;
+}
